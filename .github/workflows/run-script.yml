@@ -21,12 +21,10 @@ jobs:
     - id: run-script
       run: |
         bun start 2>&1 | tee output.txt
-        echo "::set-output name=script-output::$(cat output.txt)"
       env:
         MCP_TOKEN: ${{ inputs.mcp_token }}
     - name: Write job summary
       run: |
         echo "## Script Output" >> $GITHUB_STEP_SUMMARY
-        echo '```' >> $GITHUB_STEP_SUMMARY
+        echo ''>> $GITHUB_STEP_SUMMARY
         cat output.txt >> $GITHUB_STEP_SUMMARY
-        echo '```' >> $GITHUB_STEP_SUMMARY
