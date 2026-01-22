@@ -30,7 +30,7 @@ async function main() {
     await client.connect(transport)
 
     const result = await client.callTool({
-      name: 'auto-bin-coupons',
+      name: 'auto-bind-coupons',
       arguments: {},
     })
 
