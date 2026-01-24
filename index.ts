@@ -10,7 +10,7 @@ if (!process.env.MCP_TOKEN) {
 
 const mcpConfig = {
   server: 'mcd-mcp',
-  url: 'https://mcp.mcd.cn/mcp-servers/mcd-mcp',
+  url: 'https://mcp.mcd.cn',
   headers: {
     Authorization: `Bearer ${process.env.MCP_TOKEN}`,
   },
